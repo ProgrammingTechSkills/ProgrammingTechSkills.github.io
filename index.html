@@ -1,1 +1,75 @@
-hello
+<!DOCTYPE html>
+<head>
+    <title> Programming Skills</title>
+    <script src="Js/jQuery.js"></script>
+    <script>
+        $("document").ready(function(){
+        var date = new Date();
+        var parameter = date.getDate()+date.getTime();
+        $('head').append(
+            "<link rel='stylesheet' href='CSS/Home.css?id="+parameter+"'></link>"+
+            "<link rel='stylesheet' href='CSS/Blogs.css?id="+parameter+"'></link>"+
+            "<link rel='stylesheet' href='CSS/Courses.css?id="+parameter+"'></link>"+
+            "<link rel='stylesheet' href='CSS/Tutorials.css?id="+parameter+"'></link>"
+        );
+
+       var ele1 =  document.createElement('script');
+       ele1.setAttribute("src", "Js/Home.js?id="+parameter);
+       $('head').append(ele1);
+
+       ele1 =  document.createElement('script');
+       ele1.setAttribute("src", "Js/Courses.js?id="+parameter);
+       $('head').append(ele1);
+
+       ele1 =  document.createElement('script');
+       ele1.setAttribute("src", "Js/Blogs.js?id="+parameter);
+       $('head').append(ele1);
+
+       ele1 =  document.createElement('script');
+       ele1.setAttribute("src", "Js/Tutorials.js?id="+parameter);
+       $('head').append(ele1);
+});
+$('#home').click(function(){
+      alert("clicked home");
+    });
+    </script>
+</head>
+<body>
+    <header>
+       <a id='logo' href="index.html" ></a>
+        <h1 class="title"> Programming Tech Skills</h1>
+        <nav>
+            <button id="Home" class="headerbutton" onclick="changeContent('Home')">
+                Home
+        </button>
+            <button class="headerbutton" onclick="changeContent('Courses')">
+                Courses
+            </button>
+            <button class="headerbutton" onclick="changeContent('Blogs')">
+                Blogs
+            </button>
+            <button class="headerbutton" onclick="changeContent('Tutorials')">
+                Tutorials
+            </button>
+        </nav>
+    </header>
+    <div id="content">
+    <div id="intro">
+        <h1>Welcome To Programming World</h1>
+        <p> 
+            I am here to Teach you from basics to Advanced Progranmming Skill.<br>
+            In comming day i will try to bring Course in Telugu Language also.<br>
+            Please Support my You-Tube channel</p>
+            <div class="YouTubeDescription">
+                <a class='YouTube' href="https://www.youtube.com/@SoftwareTechSkills"> 
+                </a>
+            </div>
+    </div>
+    
+        <div class="coursesWindows"> 
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+#intro h1{
+    color:rgb(8, 58, 8);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+    font-style: italic;
+    margin-left:30px;
+}
+
+#intro p{
+    color:blueviolet;
+    font-size:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left:100px;
+}
+.title{
+    display: inline-block;
+    justify-content: center;
+    color:blue;
+    font-style: italic;
+
+}
+.headerbutton{
+    width:20cqmin;
+    height:5cqmin;
+    font-size:24px;
+    background-color:skyblue;
+    font-weight: 100;
+    color:rgb(55, 12, 136);
+    border:5px;
+    margin:5px;
+    border-radius: 3px;
+}
+
+.headerbutton:hover{
+    background-color: rgb(81, 193, 237);
+    font-weight: 200;
+    font-style:bold;
+    font-size:28px;
+}
+
+header{
+    background-color:skyblue;
+    padding:20px;
+    margin:5px;
+    border:2px;
+    border-color: rgb(59, 59, 147);
+    border-radius: 4px;
+}
+
+nav{
+    display: inline-block;
+}
+
+.YouTube{
+    display: inline-block;
+}
+.YouTubeDescription{
+    display:inline-block;
+}
+
+.logo{
+    width:3cm;
+    height:3cm;
+    display: inline-block;
+}
+
+.coursesWindows{
+    display: inline-block;
+    padding:20px;
+}
+
+.courseCard{
+    padding:5px;
+    Margin:40px;
+    width:375px;
+    height:450px;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color:blue;
+    display: inline-block;
+    box-shadow: 0px 0px 10px blue;
+    align-items: center;
+    text-align: center;
+    
+}
+.courseCard:hover{
+    box-shadow: 0px 0px 25px blue;
+    transition-duration:0.5s;
+}
+.YouTubeDescription{
+    margin-left:80px;
+}
+.like{
+    background-color:aqua;
+    margin:10px;
+    font-size:18px;
+    border: 8px solid aqua;
+    display:inline-block;
+    border-radius:25px;
+    padding:5px;
+    color:black;
+}
+
+.likeimg{
+    height:20px;
+    width:20px;
+    color:black;
+}
+.share{
+    background-color:aqua;
+    margin:10px;
+    font-size:18px;
+    border: 8px solid aqua;
+    display:inline-block;
+    border-radius:25px;
+    padding:5px;
+    color:black;
+}
+
+.subscribe{
+    color:white;
+    margin:10px;
+    font-size:18px;
+    border: 8px solid black;
+    background-color:black;
+    border-radius:25px;
+    display:inline-block;
+    padding:5px;
+}
+
+.courseImg{
+    width:375px;
+    height:200px;
+    border-radius: 5px;
+    justify-self:center;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.size12{
+    font-size:20px;
+    text-align: center;
+    
+    display: table-cell;
+    height:25px;
+    color:white;
+    background-color: blue;
+    margin:5px;
+    vertical-align: middle;
+    width:150px;
+    padding:5px;
+    margin:5px;
+    border:5px solid blue;
+    border-radius:5px;
+}
+.size12:hover{
+    transition-duration:1s;
+    background-color:blueviolet;
+    font-style:bold;
+    border:5px solid green;
+}
+.courseDescription{
+    font-size:20px;
+    font-style:italic;
+    color:rgb(70, 2, 2);
+}
+
+.CourseTitle{
+    font-size:30px;
+    color:blueviolet;
+}

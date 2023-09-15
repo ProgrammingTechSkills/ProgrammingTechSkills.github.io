@@ -1,0 +1,13 @@
+{
+    "logo":"./Img/icon.png",
+    "title":"Programming Tech Skills",
+    "greet":"Welcome To Programming World",
+    "intro":"I am here to Teach you from basics to Advanced Progranmming Skill.<br>In comming day i will try to bring Course in Telugu Language also.<br>Please Support my You-Tube channel",
+    "youTubeUrl":"https://www.youtube.com/@SoftwareTechSkills",
+    "likeicon":"Img/like.png",
+    "shareicon":"Img/share.png",
+    "subscribe":"subscribe",
+    "HomePageCourses":[
+        "Python"
+    ]
+}
