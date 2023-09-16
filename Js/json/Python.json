@@ -1,8 +1,13 @@
 {
+    "title":"Python Basics",
     "videos":[
         {
             "videoid":"1RNRqTqJKY4",
-            "title":"Hello 1"
+            "title":"Hello 1",
+            "Blog":{
+                "file":"PythonBlog.json",
+                "number":0
+            }
         },
         {
             "videoid":"tSHFO6-N6Kw",
@@ -10,6 +15,6 @@
         }
     ],
     "blogs":[
-        
+        "Installation content"
     ]
 }

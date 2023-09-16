@@ -1,11 +1,13 @@
 // redirect to reload 
 
 function getjsondata(url) {
+  var date = new Date();
+  var parameter = date.getDate()+date.getTime();
     var json = null;
     $.ajax({
       'async': false,
       'global': false,
-      'url': url,
+      'url': url+"?id="+parameter,
       'dataType': "json",
       'success': function(data) {
         json = data;
@@ -28,9 +30,7 @@ function changeContent(value){
 }
 
 $("document").ready(function(){
-    var date = new Date();
-    var parameter = date.getDate()+date.getTime();
-    let homejson = getjsondata("/Js/json/Home.json?id="+parameter);
+    let homejson = getjsondata("/Js/json/Home.json");
    
     $('.YouTube').html(
       "<img class='logo' src='"+homejson['logo']+"'/>"+
@@ -44,7 +44,7 @@ $("document").ready(function(){
       "<img class='logo' src='"+homejson['logo']+"'/>"
     )
 
-    var coursejson = getjsondata('Js/json/Courses.json?id='+parameter);
+    var coursejson = getjsondata('Js/json/Courses.json');
     for(var course=0;course<homejson['HomePageCourses'].length;course++){
       appendCourseCard(coursejson[homejson['HomePageCourses'][course]]);
     }

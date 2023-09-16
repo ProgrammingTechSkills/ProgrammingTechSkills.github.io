@@ -1,11 +1,9 @@
 function loadCourses(){
-    var date = new Date();
-    var parameter = date.getDate()+date.getTime();
     $('#content').append(
         '<h1> Available Courses </h1>'+
         '<div class="coursesWindows"></div>'
         );
-    coursesData = getjsondata('./Js/json/Courses.json?id='+parameter);
+    coursesData = getjsondata('./Js/json/Courses.json');
 
     var scourse = null;
     for(var course=0;course<coursesData['coursesList'].length;course++){
@@ -16,7 +14,7 @@ function loadCourses(){
 function appendCourseCard(scourse){
     $('.coursesWindows').append(
         '<div class="courseCard">'+
-        '<a href="javascript:OpenCourse(\''+scourse['key']+'\')">'+
+        '<a href="javascript:OpenCourse(\''+scourse['file']+'\')">'+
         '<div class="content">'+
             '<h1 class="CourseTitle">'+scourse['title']+'</h1>'+
             '<img class="courseImg" src="'+scourse['img']+'" />'+
@@ -27,9 +25,7 @@ function appendCourseCard(scourse){
 }
 
 function OpenCourse(course){
-    var date = new Date();
-    var parameter = date.getDate()+date.getTime();
-    courseContent = getjsondata('Js/json/'+course+'.json?id='+parameter);
+    courseContent = getjsondata('Js/json/'+course);
     console.log(courseContent);
     $('#content').html("<div class='mainwindow'></div>");
     $('.mainwindow').html(
@@ -37,7 +33,7 @@ function OpenCourse(course){
         "<div class='menuWindow'></div>");
 
     $('.menuWindow').html(
-        '<h3 class="topic"> Python Course </h3>'+
+        '<h2 class="topic"> '+courseContent['title']+' </h2>'+
         '<div class="listwindow"></div>'
     );
     $('.listwindow').html(

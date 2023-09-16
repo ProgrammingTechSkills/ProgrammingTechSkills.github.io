@@ -1,3 +1,19 @@
 {
-    
+    "Blogs":[
+        {
+            "title":"Python Basics",
+            "file":"Python.json",
+            "topics":[
+                "Python Installation",
+                "Data Types"
+            ]
+        },
+        {
+            "title":"Java Script Basics",
+            "file":"PythonBlogs.json",
+            "topics":[
+                "Python Installation"
+            ]
+        }
+    ]
 }
