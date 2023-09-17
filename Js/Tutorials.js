@@ -91,5 +91,6 @@ function previoustutorial(){
 function loadTutorialContent(json){
     $('.tutorialwindow').html("");
     $('.tutorialwindow').html(
-        "<h1>"+json['title']+'</h1>');
+        "<h1>"+json['title']+'</h1>'+
+        json.Content.join());
 }

@@ -37,6 +37,6 @@ function loadblog(key){
 }
 
 function createContent(jsondata){
-    return "<p>Need to write code here</p>"
+    return "<div class=\"blog\">"+jsondata.join("")+"</div>";
 }
 

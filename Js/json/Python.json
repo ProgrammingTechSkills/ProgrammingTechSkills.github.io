@@ -28,13 +28,17 @@
     "list":[
         {
             "title":"Python OverView",
-            "Content":"About Python"
+            "Content":[
+                "<p>Hello World</p>",
+                "<img src='Img/Python.png'/>"
+            ]
         },
         {
             "title":"Python Installation and getting started",
-            "Content":"About Python"
+            "Content":[
+                ""
+            ]
         }
-
 
     ]
 }
