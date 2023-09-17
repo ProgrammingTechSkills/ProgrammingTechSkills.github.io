@@ -4,14 +4,16 @@
         {
             "videoid":"1RNRqTqJKY4",
             "title":"Hello 1",
-            "Blog":{
-                "file":"PythonBlog.json",
-                "number":0
-            }
+            "tutorialIds":[
+                0
+            ]
         },
         {
             "videoid":"tSHFO6-N6Kw",
-            "title":"Hello 2"
+            "title":"Hello 2",
+            "tutorialIds":[
+                1
+            ]
         }
     ],
     "tutorial":{

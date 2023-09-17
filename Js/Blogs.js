@@ -9,7 +9,7 @@ function show(id){
 }
 
 function loadBlogs(){
-    var blogs = getjsondata("Js/json/Blogs.json").Blogs;
+    var blogs = getjsondata("Blogs").Blogs;
     $("#content").html("");
     for(var i=0;i<blogs.length;i++){
         $("#content").append(
@@ -24,8 +24,7 @@ function loadBlogs(){
 }
 
 function loadblog(key){
-    alert(key);
-    jsondata = getjsondata("Js/json/Blogs.json")[key];
+    jsondata = getjsondata("Blogs")[key];
     if(jsondata+"" == "undefined"){
         return;
     }

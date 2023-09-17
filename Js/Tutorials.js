@@ -2,7 +2,7 @@ function loadTutorials(){
     $('#content').html(
         '<div class="coursesWindows"></div>'
         );
-    tutorialsData = getjsondata('./Js/json/Tutorials.json');
+    tutorialsData = getjsondata('Tutorials');
     for(var tutorial=0;tutorial<tutorialsData['tutorials'].length;tutorial++){
         appendTutorialCard(tutorialsData['tutorials'][tutorial]);
     }
@@ -31,7 +31,7 @@ function openTutorial(source){
         '<button class="next tutorialbutton" onclick="nexttutorial()"> Next </button>'+
         '</div>'
         );
-    tutorialjson = getjsondata("Js/json/"+source)['tutorial'];
+    tutorialjson = getjsondata(source)['tutorial'];
     topics = tutorialjson.topics
     filename = source.split(".")[0];
     let tutorialid = 0+"_"+filename;
@@ -54,7 +54,7 @@ function loadtutorial(id){
     values = id.split("_");
     var Djson = null;
     try{
-        Djson = getjsondata("Js/json/"+values[1]+".json")["list"][parseInt(values[0])];
+        Djson = getjsondata(values[1])["list"][parseInt(values[0])];
         if(Djson+"" == 'undefined'){
            return;
         }
@@ -92,5 +92,5 @@ function loadTutorialContent(json){
     $('.tutorialwindow').html("");
     $('.tutorialwindow').html(
         "<h1>"+json['title']+'</h1>'+
-        json.Content.join());
+        json.Content.join(""));
 }

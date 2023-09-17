@@ -24,7 +24,7 @@ function getjsondata(url) {
     $.ajax({
       'async': false,
       'global': false,
-      'url': url+"?id="+parameter,
+      'url': "Js/json/"+url+".json?id="+parameter,
       'dataType': "json",
       'success': function(data) {
         json = data;
@@ -47,7 +47,7 @@ function changeContent(value){
 }
 
 $("document").ready(function(){
-    let homejson = getjsondata("/Js/json/Home.json");
+    let homejson = getjsondata("Home");
    
     $('.YouTube').html(
       "<img class='logo' src='"+homejson['logo']+"'/>"+
@@ -61,7 +61,7 @@ $("document").ready(function(){
       "<img class='logo' src='"+homejson['logo']+"'/>"
     )
 
-    var coursejson = getjsondata('Js/json/Courses.json');
+    var coursejson = getjsondata('Courses');
     for(var course=0;course<homejson['HomePageCourses'].length;course++){
       appendCourseCard(coursejson[homejson['HomePageCourses'][course]]);
     }
