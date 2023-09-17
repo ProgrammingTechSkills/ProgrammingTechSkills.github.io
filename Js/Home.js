@@ -1,4 +1,21 @@
 // redirect to reload 
+function getfilecontent(url){
+  var date = new Date();
+  var parameter = date.getDate()+date.getTime();
+  var txt = null;
+  $.ajax({
+    'async': false,
+    'global': false,
+    'url': url+"?id="+parameter,
+    'dataType': "text",
+    'success': function(data) {
+      console.log(data);
+      txt = data;
+    }
+  });
+  console.log(txt);
+  return txt;
+}
 
 function getjsondata(url) {
   var date = new Date();

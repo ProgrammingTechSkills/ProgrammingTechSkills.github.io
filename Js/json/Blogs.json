@@ -2,18 +2,16 @@
     "Blogs":[
         {
             "title":"Python Basics",
-            "file":"Python.json",
-            "topics":[
-                "Python Installation",
-                "Data Types"
-            ]
+            "subcontent":"Hello World",
+            "ContentKey":"key1"
         },
         {
-            "title":"Java Script Basics",
-            "file":"PythonBlogs.json",
-            "topics":[
-                "Python Installation"
-            ]
+            "title":"Python Basics",
+            "subcontent":"Hello World",
+            "ContentKey":"key1"
         }
-    ]
+    ],
+    "key1":{
+
+    }
 }

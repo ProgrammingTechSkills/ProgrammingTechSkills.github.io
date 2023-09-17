@@ -1,3 +1,10 @@
 {
-    
+   "tutorials":[
+    {
+      "file":"Python.json",
+      "title":"Python Tutorials",
+      "img":"Img/Python.png",
+      "description":" Python Language is Latest and more demanding because of its flexiblity and used in different domains like Machine Learning , wed Development ,Application Development etc..."
+    }
+    ]
 }

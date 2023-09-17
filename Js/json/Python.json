@@ -14,7 +14,27 @@
             "title":"Hello 2"
         }
     ],
-    "blogs":[
-        "Installation content"
+    "tutorial":{
+        "topics":[
+            "Introduction"
+        ],
+        "Introduction":[
+            "Python Overview",
+            "Python Installation and getting started",
+            "Syntax"
+        ]
+    },
+
+    "list":[
+        {
+            "title":"Python OverView",
+            "Content":"About Python"
+        },
+        {
+            "title":"Python Installation and getting started",
+            "Content":"About Python"
+        }
+
+
     ]
 }

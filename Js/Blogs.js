@@ -9,40 +9,34 @@ function show(id){
 }
 
 function loadBlogs(){
-    var blogsJson = getjsondata("Js/json/Blogs.json");
-    $("#content").html(
-        '<div class="mainblogswindow"></div>'
-    );
-    $(".mainblogswindow").html(
-        '<h1 class="mainblogTitle"> Blogs </h1>'+
-        '<div class="courseBlogs"></div>'
-    );
-    for(var i=0;i<blogsJson.Blogs.length;i++){
-        courseBlog = blogsJson.Blogs[i];
-        id="C"+i;
-        $(".courseBlogs").append(
-            '<button class="courseBlogTitle" onclick="show(\''+id+'\');\"> '+courseBlog['title']+' </button>'+
-            '<div id="'+id+'" class=\'hide\'></div>'
+    var blogs = getjsondata("Js/json/Blogs.json").Blogs;
+    $("#content").html("");
+    for(var i=0;i<blogs.length;i++){
+        $("#content").append(
+            '<div onclick=\'loadblog("'+blogs[i].ContentKey+'")\' class=\'blogcard\'>'+
+                '<h1>'+blogs[i].title+'</h1>'+
+                '<p>'+blogs[i].subcontent+'</p>'+
+            "</div>"
         );
-        for(var j=0;j<courseBlog["topics"].length;j++){
-            $("#"+id).append(
-                '<div id="C'+i+'T'+j+'" class="show">'+
-                '<button id="C'+i+'T'+j+'h" '+
-                'onclick="loadBlog(\''+"C"+i+"T"+j+"div\',\'"+courseBlog.file+'\','+j+')"'
-                +'class="blogtitle">'+courseBlog.topics[j]+'</button>'+
-                '<div id="C'+i+'T'+j+'div" class="topicdive hide"></div>'+
-            '</div>'
-            );
-        }
     }
+    $('#content').append("<div id='blogw' class='blogwindow hide'></div>");
 
 }
 
-function loadBlog(id,file,number){
-    jsondata = getjsondata("Js/json/"+file);
-    $('#'+id).html(
-        jsondata.blogs[number]
+function loadblog(key){
+    alert(key);
+    jsondata = getjsondata("Js/json/Blogs.json")[key];
+    if(jsondata+"" == "undefined"){
+        return;
+    }
+    $(".blogwindow").html(
+        "<button onclick=\'show(\"blogw\")\' class='close'>X</button>"+
+        createContent(jsondata)
     )
-    show(id);
+    show('blogw');
+}
+
+function createContent(jsondata){
+    return "<p>Need to write code here</p>"
 }
 

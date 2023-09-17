@@ -1,77 +1,71 @@
-a{
-    text-decoration: none;
-}
-.mainblogswindow{
-    background-color: rgb(190, 190, 249);
-    border:5px solid blue;
-    margin:3px;
-    border-radius:5px;
+.blogcard{
+    width:80%;
+    margin:50px;
+    border:2px solid blue;
     padding:10px;
+    border-radius:10px;
+    background-color: rgb(251, 251, 253);
+    box-shadow:5px 5px 5px blue;
+    cursor:pointer;
 }
-.mainblogTitle{
-    font-size:35px;
-    color:rgb(254, 254, 254);
-    text-align: center;
-    background-color:rgb(29, 1, 112);
-    margin-top:0px;
+
+.blogcard:hover{
+    background-color:rgb(169, 169, 214);
+    border:2px;
 }
-.courseBlogs{
-    margin-left:5%;
-    padding:5px;
-    border: 5px solid white;
-    border-radius: 2px;
-    background-color: white;
-    box-shadow: 2px 2px 3px solid;
-}
-.courseBlogTitle{
-    font-size:25px;
-    color:blue;
-    background-color:rgb(246, 114, 114);
-    border:2px solid rgb(246, 114, 114);
-    border-radius:2px;
-    margin-top:0px;
-    margin-bottom:1px;
-    padding-left:50px;  
-    display:block;
-    width:100%;
-    text-align:left; 
-}
-.courseBlogTitle:hover{
-    font-size:25px;
-    transition: 0.5s;
+
+.readmore{
+    background-color: blue;
     color:white;
-    padding-left:45px;
-}
-.blogtitle{
-    display:block;
-    min-height:30px;
-    color:blueviolet;
     font-size: 20px;
-    margin:2px;
-    padding:1px;
-    padding-left:20px;
-    width:92%;
-    text-align:left;
-    margin-left:8%;
-
+    border-radius:5px;
+    padding:4px;
+    margin:5px;
+    border-radius: 3px;
 }
 
-.topicdive{
-    background-color:white;
-    border:3px solid blueviolet;
-    margin-top:1px;
-    margin-left:200px;
-    font-size:20px;
-    font-style:solid;
-    padding-left:20px;
-    vertical-align: middle;
+.blogwindow{
+    position:absolute;
+    top:30%;
+    left:5%;
+    right:5%;
+    overflow: scroll;
+    bottom:5%;
+    background-color:bisque;
+    border:10px;
+    border-radius: 10px 0px 0px 0px;
+    box-shadow: 0px 0px 10px rgb(39, 39, 65);
 }
 
 .show{
-    visibility: visible;
-    display: block;
+    display:block;
+    visibility:visible;
 }
+
 .hide{
-    visibility: hidden;
     display:none;
+    visibility:hidden;
 }
+
+.close{
+    width:25px;
+    height:25px;
+    border-radius:20px;
+    margin:5px;
+    text-align:center;
+    vertical-align: middle;
+    font-style: strong;
+    background:rgb(162, 29, 29);
+    color:white;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    border:2px solid black;
+}
+
+.close:hover{
+    font-size:20px;
+    width:30px;
+    height:30px;
+
+}
+

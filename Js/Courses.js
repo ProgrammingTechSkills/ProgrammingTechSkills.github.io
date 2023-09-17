@@ -1,6 +1,5 @@
 function loadCourses(){
     $('#content').append(
-        '<h1> Available Courses </h1>'+
         '<div class="coursesWindows"></div>'
         );
     coursesData = getjsondata('./Js/json/Courses.json');
@@ -13,14 +12,13 @@ function loadCourses(){
 
 function appendCourseCard(scourse){
     $('.coursesWindows').append(
-        '<div class="courseCard">'+
-        '<a href="javascript:OpenCourse(\''+scourse['file']+'\')">'+
-        '<div class="content">'+
+        '<div  onclick="OpenCourse(\''+scourse['file']+'\')" class="courseCard">'+
+        '<div  class="content">'+
             '<h1 class="CourseTitle">'+scourse['title']+'</h1>'+
             '<img class="courseImg" src="'+scourse['img']+'" />'+
             '<p class="courseDescription">'+
                 scourse['description']+
-            '</p></div></a></div>'
+            '</p></div></div>'
     );
 }
 

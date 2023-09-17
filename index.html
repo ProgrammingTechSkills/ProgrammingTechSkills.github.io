@@ -3,6 +3,7 @@
     <title> Programming Skills</title>
     <script src="Js/jQuery.js"></script>
     <script>
+        let tutorialid=null;
         $("document").ready(function(){
         var date = new Date();
         var parameter = date.getDate()+date.getTime();
@@ -41,12 +42,15 @@ $('#home').click(function(){
         <nav>
             <button id="Home" class="headerbutton" onclick="changeContent('Home')">
                 Home
-        </button>
+            </button>
             <button class="headerbutton" onclick="changeContent('Courses')">
                 Courses
             </button>
             <button class="headerbutton" onclick="changeContent('Blogs')">
                 Blogs
+            </button>
+            <button class="headerbutton" onclick="changeContent('Tutorials')">
+                Tutorials
             </button>
         </nav>
     </header>

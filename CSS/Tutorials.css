@@ -1,3 +1,72 @@
-a{
-    text-decoration: none;
+.tutorialSideMenu{
+    width:18%;
+    Overflow-y:scroll;
+    margin:1px;
+    border:1px solid blue;
+    border-radius:3px;
+    padding-left:7px;
+    color:blue;
+    float:left;
+}
+.tutorialtopic{
+    display:block;
+    font-size:28px;
+    margin-bottom:4px;
+    margin-left:1px;
+}
+.tutorialsubtopic{
+    display:block;
+    font-size:20px;
+    margin-bottom:3px;
+    margin-left:6px;
+    padding-left:4px;
+    cursor: pointer;
+    border:2px;
+}
+.tutorialsubtopic:hover{
+    color:blueviolet;
+    background-color:aqua;
+    border-radius:2px;
+}
+
+.selected{
+    color:blueviolet;
+    background-color:aqua;
+    border-radius:2px;
+}
+
+.tutorialMainWindow{
+
+    margin:2px;
+    padding:2px;
+    width:80%;
+    overflow-y:scroll;
+    float:left;
+}
+
+.previous{
+    float:left;
+}
+
+.next{
+    float:right;
+}
+
+.tutorialwindow{
+    margin:40px 0px 10px 0px;
+    padding:4px;
+    border:4px;
+    background-color: rgb(228, 228, 240);
+    border-radius:10px;
+}
+
+.tutorialbutton{
+    background-color: blue;
+    color:white;
+    font-size: 20px;
+    border-radius:5px;
+    padding:4px;
+    margin:5px;
+    border-radius: 3px;
+    width:110px;
 }
