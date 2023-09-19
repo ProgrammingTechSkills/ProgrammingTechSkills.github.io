@@ -56,12 +56,12 @@ function OpenCourse(course){
             '</button>'
         );
     }
-    console.log(courseContent['videos'][0].tutorialIds);
     $('.tutorials').html(
         getVideoTutorialContent(courseContent.list,
             courseContent['videos'][0].tutorialIds.join(",").split(",")
             )
     );
+    Prism.highlightAll();
 }
 
 function loadVideo(info){
@@ -71,19 +71,17 @@ function loadVideo(info){
     tlistid = video.tutorialIds;
     tcontent = jsonContent.list;
     $('#youtubeiframe').attr('src','https://www.youtube.com/embed/'+video.videoid+'?autoplay=1&fs=1&iv_load_policy=3');
-
     $('.tutorials').html(
         getVideoTutorialContent(tcontent,tlistid)
     );
-
+    Prism.highlightAll();
 }
 
 function getVideoTutorialContent(json,numbers){
     html = "";
     for(var i=0;i<numbers.length;i++){
        html = html+"<h1>"+json[numbers[i]]['title']+'</h1>'+
-       json[numbers[i]].Content.join("");
+       getHTML(json[numbers[i]].Content);
     }
-    console.log(html);
     return html;
 }

@@ -90,22 +90,9 @@ function previoustutorial(){
 
 function loadTutorialContent(json){
     $('.tutorialwindow').html("");
-    for(var i=0;i<json.Content.length;i++){
-        console.log(json.Content[i].includes("file:"));
-        if (json.Content[i].includes("file:")){
-            filename = json.Content[i].split(":")[1];
-            json.Content[i] = "<pre>"+
-            '<label onclick=\'copycode("'+filename+'",self)\' class="codeCopy"> Copy </label>'+
-            '<code class="language-python codeTag">'+
-            getfilecontent(filename)
-            +'</code>'+
-            "</pre>"
-        }
-    }
-    console.log(json);
     $('.tutorialwindow').html(
         "<h1>"+json['title']+'</h1>'+
-        json.Content.join(""));
+        getHTML(json.Content));
         Prism.highlightAll();
 }
 
@@ -114,4 +101,21 @@ function copycode(filename,self){
         getfilecontent(filename)
     );
     alert("coppied");
+}
+
+function getHTML(contentList){
+    for(var i=0;i<contentList.length;i++){
+        console.log(contentList[i].includes("file:"));
+        if (contentList[i].includes("file:")){
+            filename = contentList[i].split(":")[1];
+            contentList[i] = "<pre>"+
+            '<label onclick=\'copycode("'+filename+'",self)\' class="codeCopy"> Copy </label>'+
+            '<code class="language-python codeTag">'+
+            getfilecontent(filename)
+            +'</code>'+
+            "</pre>"
+        }
+    }
+
+    return contentList.join("");
 }
