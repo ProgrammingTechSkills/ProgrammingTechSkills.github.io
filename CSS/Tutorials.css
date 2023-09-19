@@ -71,10 +71,24 @@
     width:110px;
 }
 
-.tutorialwindow img{
+.tutorialwindow img,.tutorials img{
     max-width:700px;
     min-width:150px;
     height:auto;
     border-radius: 5px;
     margin:2px;
+}
+
+.codeCopy{
+    float:right;
+    background-color:back;
+    color:white;
+    text-decoration:solid;
+    text-shadow:none;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.codeCopy:hover{
+    background-color:white;
+    color:black;
 }

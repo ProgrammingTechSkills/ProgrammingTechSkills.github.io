@@ -5,7 +5,7 @@
             "videoid":"1RNRqTqJKY4",
             "title":"Hello 1",
             "tutorialIds":[
-                0
+                0,1
             ]
         },
         {
@@ -32,7 +32,8 @@
             "title":"Python OverView",
             "Content":[
                 "<p>Hello World</p>",
-                "<img src='Img/Python.png'/>"
+                "<img src='Img/Python.png'/>",
+                "file:PythonCodes/hello.py"
             ]
         },
         {

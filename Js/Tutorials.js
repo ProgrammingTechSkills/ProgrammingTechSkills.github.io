@@ -90,7 +90,28 @@ function previoustutorial(){
 
 function loadTutorialContent(json){
     $('.tutorialwindow').html("");
+    for(var i=0;i<json.Content.length;i++){
+        console.log(json.Content[i].includes("file:"));
+        if (json.Content[i].includes("file:")){
+            filename = json.Content[i].split(":")[1];
+            json.Content[i] = "<pre>"+
+            '<label onclick=\'copycode("'+filename+'",self)\' class="codeCopy"> Copy </label>'+
+            '<code class="language-python codeTag">'+
+            getfilecontent(filename)
+            +'</code>'+
+            "</pre>"
+        }
+    }
+    console.log(json);
     $('.tutorialwindow').html(
         "<h1>"+json['title']+'</h1>'+
         json.Content.join(""));
+        Prism.highlightAll();
+}
+
+function copycode(filename,self){
+    navigator.clipboard.writeText(
+        getfilecontent(filename)
+    );
+    alert("coppied");
 }

@@ -1,4 +1,3 @@
-// redirect to reload 
 function getfilecontent(url){
   var date = new Date();
   var parameter = date.getDate()+date.getTime();
@@ -65,9 +64,51 @@ $("document").ready(function(){
     for(var course=0;course<homejson['HomePageCourses'].length;course++){
       appendCourseCard(coursejson[homejson['HomePageCourses'][course]]);
     }
-  
+    reload();
   });
 
+  function reload(){
+    if (window.location.search.substr(1)+"" == ''){
+      return;
+    }
+    parametersString = window.location.search.substr(1);
+    var list = []
+    if(parametersString.includes('&')){
+      list = parametersString.split('&');
+    }else{
+      list.push(parametersString);
+    }
+
+    //courses
+    console.log(list[0].includes('courses'))
+    if(list[0].includes('courses')){
+      $('#content').html(""
+        );
+      if(list.length==1){
+          loadCourses();
+      }else if(list.length==2){
+          OpenCourse(list[1].split("=")[1]);
+      }else if(list.length==3){
+          OpenCourse(list[1].split("=")[1]);
+          loadVideo(list[2].split("=")[1]+"_"+list[1].split("=")[1]);
+      }
   
+    }else if(list[0].includes('tutorials')){
+      if(list.length == 1){
+        loadTutorials();
+      }else if(list.length == 2){
+        openTutorial(list[1].split("=")[1]);
+      }else if(list.length == 3){
+        openTutorial(list[1].split("=")[1]);
+        loadtutorial(list[2].split("=")[1]+"_"+list[1].split("=")[1]);
+      }
+  
+    }else if(list[0].includes('blogs')){
+        loadBlogs();
+      if(list.length == 2){
+        loadblog(list[1].split("=")[1]);
+      }
+    }
+  }  
 
 

@@ -25,11 +25,12 @@ function appendCourseCard(scourse){
 function OpenCourse(course){
     courseContent = getjsondata(course);
     console.log(courseContent);
-    $('#content').html("<div class='mainwindow'></div>");
+    $('#content').html(
+        "<div class='mainwindow'></div>"+
+        "<div class='tutorials'></div>");
     $('.mainwindow').html(
         "<div class='video'></div>"+
-        "<div class='menuWindow'></div>"+
-        "<div class='tutorials'></div>");
+        "<div class='menuWindow'></div>");
 
     $('.menuWindow').html(
         '<h2 class="topic"> '+courseContent['title']+' </h2>'+

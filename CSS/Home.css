@@ -154,3 +154,8 @@ a:link{
     font-size:30px;
     color:blueviolet;
 }
+
+.codeTag{
+    width:80%;
+    display:block;
+}
