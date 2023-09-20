@@ -1,5 +1,7 @@
 {
     "coursesList":[
+        
+        "VisualStudio",
         "Python"
     ],
     "Python":{
@@ -8,9 +10,10 @@
       "img":"Img/Python.png",
       "description":" Python Language is Latest and more demanding because of its flexiblity and used in different domains like Machine Learning , wed Development ,Application Development etc..."
     },
-    "VisualStudio"{
+    "VisualStudio":{
       "file":"VisualStudio",
       "title":"Visual Studio",
       "img":"Img/VisualStudio.png",
       "description":" This works as an IDE for multiple languages and helps to install mutltiple Extenctions which will easy our programming life , Helps to controll versions using git & github"
+    }
 }

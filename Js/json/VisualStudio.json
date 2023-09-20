@@ -1,5 +1,5 @@
 {
-    "title":"VisualStudio",
+    "title":"Visual Studio",
     "videos":[
         {
             "videoid":"CCBPZuAuOKU",
@@ -40,7 +40,7 @@
 
     "list":[
         {
-            "title":"Python OverView",
+            "title":"Install Visual Stuido Code",
             "Content":[
                 "<p>Hello World</p>",
                 "<img src='Img/Python.png'/>",

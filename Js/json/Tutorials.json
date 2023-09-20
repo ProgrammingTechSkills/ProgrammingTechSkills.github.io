@@ -1,6 +1,12 @@
 {
    "tutorials":[
     {
+      "file":"VisualStudio",
+      "title":"Visual Studio Tutorials",
+      "img":"Img/VisualStudio.png",
+      "description":" This works as an IDE for multiple languages and helps to install mutltiple Extenctions which will easy our programming life , Helps to controll versions using git & github"
+    },
+    {
       "file":"Python",
       "title":"Python Tutorials",
       "img":"Img/Python.png",
