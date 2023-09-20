@@ -1,0 +1,58 @@
+{
+    "title":"VisualStudio",
+    "videos":[
+        {
+            "videoid":"CCBPZuAuOKU",
+            "title":"Install Visual Studio Code",
+            "tutorialsIds":[
+
+            ]
+        },
+        {
+            "videoid":"1RNRqTqJKY4",
+            "title":"Files and Folders Creation & Installing Extenctions",
+            "tutorialIds":[
+                
+            ]
+        },
+        {
+            "videoid":"tSHFO6-N6Kw",
+            "title":"Configure Git and GitHube , Serarch a string form the project",
+            "tutorialIds":[
+                
+            ]
+        }
+    ],
+    "tutorial":{
+        "topics":[
+            "Introduction"
+        ],
+        "Introduction":[
+            "About VisualStudio Code",
+            "Install and configure VisualStudio Code",
+            "Handling Files and Folders",
+            "Installing Extenctions",
+            "Git configure",
+            "Git Hub Configure",
+            "Search a string in Project"
+        ]
+    },
+
+    "list":[
+        {
+            "title":"Python OverView",
+            "Content":[
+                "<p>Hello World</p>",
+                "<img src='Img/Python.png'/>",
+                "file:PythonCodes/hello.py"
+            ]
+        },
+        {
+            "title":"Python Installation and getting started",
+            "Content":[
+                ""
+            ]
+        }
+
+    ]
+}
